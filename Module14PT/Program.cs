@@ -6,18 +6,18 @@ class Program
 {
     static void Main()
     {
-        string text = "This is the house that Jack built. And this is the wheat that is stored in the dark closet In the house that Jack built. And this is the cheerful bird sparrow That often steals the wheat That is stored in the dark closet In the house that Jack built.";
+        string text = "Вот дом, Который построил Джек. А это пшеница, Кото­рая в темном чулане хранится В доме, Который построил Джек. А это веселая птица­ синица, Которая часто вору­ет пшеницу, Которая в темном чулане хранится В доме, Который построил Джек.";
 
-        // Split the text into words
+        
         string[] words = text.Split(new char[] { ' ', ',', '.', '!', '?', '-', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
-        // Create a collection to store the statistics
+        
         Dictionary<string, int> wordCount = new Dictionary<string, int>();
 
-        // Count the occurrences of each word
+       
         foreach (string word in words)
         {
-            // Convert the word to lowercase to account for different cases
+            
             string cleanedWord = word.ToLower();
 
             if (wordCount.ContainsKey(cleanedWord))
@@ -30,7 +30,7 @@ class Program
             }
         }
 
-        // Display the statistics
+        
         Console.WriteLine("Word\t\tCount");
         foreach (var pair in wordCount.OrderBy(p => p.Key))
         {
